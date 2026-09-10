@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Ascendra.CobranzaXolo.Api/Ascendra.CobranzaXolo.Api.csproj" />
+    <Project Path="src/Ascendra.CobranzaXolo.Application/Ascendra.CobranzaXolo.Application.csproj" />
+    <Project Path="src/Ascendra.CobranzaXolo.Domain/Ascendra.CobranzaXolo.Domain.csproj" />
+    <Project Path="src/Ascendra.CobranzaXolo.Infrastructure/Ascendra.CobranzaXolo.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Ascendra.CobranzaXolo.Application.Tests/Ascendra.CobranzaXolo.Application.Tests.csproj" />
+  </Folder>
+</Solution>
