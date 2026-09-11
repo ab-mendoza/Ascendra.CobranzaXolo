@@ -24,7 +24,7 @@
     rgba(236, 245, 241, 0.4) 52%,
     rgba(237, 243, 248, 0.56)
   );
-  --photo: url("/assets/leaves-day.jpg");
+  --photo: var(--day-photo, none);
   --heat-empty: #f0f4f9;
   --heat-blue: #1f5599;
   --activity-empty: #edf4fd;
@@ -55,7 +55,7 @@ body.ascendra-dark {
     rgba(8, 17, 35, 0.36) 52%,
     rgba(5, 12, 25, 0.66)
   );
-  --photo: url("/assets/galaxy.jpg");
+  --photo: var(--dark-photo, none);
   --heat-empty: #17233b;
   --heat-blue: #a3d5fa;
   --activity-empty: #17233b;

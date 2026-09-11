@@ -25,6 +25,10 @@ import type {
 } from "./types";
 import "./App.css";
 
+const assetUrl = (fileName: string) =>
+  `${import.meta.env.BASE_URL}assets/${fileName}`;
+const xoloLogoUrl = assetUrl("xolo-wolf.png");
+
 const money = new Intl.NumberFormat("es-MX", {
   style: "currency",
   currency: "MXN",
@@ -94,7 +98,7 @@ function LoginScreen({ onSuccess }: { onSuccess: () => void }) {
     <main className="login-shell">
       <section className="login-card">
         <div className="brand-logo-frame login-logo">
-          <img className="brand-logo" src="/assets/xolo-wolf.png" alt="Xolo" />
+          <img className="brand-logo" src={xoloLogoUrl} alt="Xolo" />
         </div>
         <p className="brand-eyebrow">GESTIÓN DE COBRANZA</p>
         <h1>Ascendra</h1>
@@ -1321,15 +1325,19 @@ function App() {
   if (!authenticated)
     return <LoginScreen onSuccess={() => setAuthenticated(true)} />;
   return (
-    <main className="app-shell">
+    <main
+      className="app-shell"
+      style={
+        {
+          "--day-photo": `url("${assetUrl("leaves-day.jpg")}")`,
+          "--dark-photo": `url("${assetUrl("galaxy.jpg")}")`,
+        } as React.CSSProperties
+      }
+    >
       <header className="card dashboard-header">
         <div className="brand-block">
           <div className="brand-logo-frame">
-            <img
-              className="brand-logo"
-              src="/assets/xolo-wolf.png"
-              alt="Xolo"
-            />
+            <img className="brand-logo" src={xoloLogoUrl} alt="Xolo" />
           </div>
           <div>
             <p className="brand-eyebrow">GESTIÓN DE COBRANZA</p>
